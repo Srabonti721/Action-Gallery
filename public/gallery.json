@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "Vintage Camera",
+    "description": "A classic vintage film camera in excellent condition.",
+    "currentBidPrice": 120,
+    "timeLeft": "2h 15m",
+    "bidsCount": 8,
+    "image": "https://i.ibb.co.com/xSR2JZv6/Bid1-min.png"
+  },
+  {
+    "id": 2,
+    "title": "Gaming Laptop",
+    "description": "High-performance gaming laptop with RTX graphics card.",
+    "currentBidPrice": 950,
+    "timeLeft": "5h 40m",
+    "bidsCount": 15,
+    "image": "https://i.ibb.co.com/SXWsj3qB/Bid2-min.png"
+  },
+  {
+    "id": 3,
+    "title": "Smart Watch",
+    "description": "Waterproof smart watch with heart rate monitoring.",
+    "currentBidPrice": 75,
+    "timeLeft": "1d 3h",
+    "bidsCount": 12,
+    "image": "https://i.ibb.co.com/cSCf3m06/Bid3-min.png"
+  },
+  {
+    "id": 4,
+    "title": "Mountain Bicycle",
+    "description": "Durable mountain bike suitable for off-road adventures.",
+    "currentBidPrice": 340,
+    "timeLeft": "6h 10m",
+    "bidsCount": 6,
+    "image": "https://i.ibb.co.com/HDmJ7KDh/Bid4-min.png"
+  },
+  {
+    "id": 5,
+    "title": "Wireless Headphones",
+    "description": "Noise-cancelling wireless headphones with long battery life.",
+    "currentBidPrice": 60,
+    "timeLeft": "9h 25m",
+    "bidsCount": 20,
+    "image": "https://i.ibb.co.com/N2xTdCRs/Bid5-min.png"
+  },
+  {
+    "id": 6,
+    "title": "Modern Desk Lamp",
+    "description": "Stylish LED desk lamp with adjustable brightness.",
+    "currentBidPrice": 45,
+    "timeLeft": "12h 50m",
+    "bidsCount": 4,
+    "image": "https://i.ibb.co.com/tMPktWWK/Bid6-min.png"
+  }
+]
