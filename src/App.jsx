@@ -20,8 +20,8 @@ function App() {
   const [currentBid, setCurrentBid] = useState(0);
   const [favorites, setFavorites] = useState([]);
   const [fav, setFav] = useState(false)
-  const handleCurrentBit = (galleryData) => {
-
+  const handleCurrentBit = (galleryData, id) => {
+handleCloseBtn(id)
     const newFavoriteData = [...favorites, galleryData]
     setFavorites(newFavoriteData)
 
@@ -29,10 +29,19 @@ function App() {
     setCurrentBid(newBid)
     setFav(true)
   }
-  const handleCloseBtn = () =>{
+  const handleCloseBtn = (id) =>{  
+    const remainingFavorites = favorites.filter((fav)=>fav.id !== id)
+    console.log(remainingFavorites.length);
     
-    console.log("click",);
-    
+   if(remainingFavorites.length > 0) {
+    setFavorites(remainingFavorites)
+   }
+   else{
+          <div className='text-center'>
+                      <h1 className='text-xl font-semibold mb-4'>No Favorites Yet</h1>
+                      <p>Click the heart icon on any item to add it to your favorites</p>
+                  </div>
+   }
   }
 
   return (
