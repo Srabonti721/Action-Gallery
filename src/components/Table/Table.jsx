@@ -4,7 +4,6 @@ import SingleTable from './SingleTable';
 const Table = ({ galleryPromise }) => {
   const gallery = use(galleryPromise)
 
-
   return (
     <div>
         <table className="table">
@@ -20,7 +19,7 @@ const Table = ({ galleryPromise }) => {
           </thead>
         </table>
       {
-        gallery.map(galleryData => <SingleTable galleryData={galleryData}></SingleTable>)
+        gallery.map(galleryData => <SingleTable key={galleryData.id} galleryData={galleryData} ></SingleTable>)
       }
     </div>
   );
