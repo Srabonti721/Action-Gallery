@@ -29,6 +29,11 @@ function App() {
     setCurrentBid(newBid)
     setFav(true)
   }
+  const handleCloseBtn = () =>{
+    
+    console.log("click",);
+    
+  }
 
   return (
     <>
@@ -55,7 +60,7 @@ function App() {
               <div className='px-4 my-4'>
                 {
                   fav ?
-                   favorites.map(fav => <FavoriteItems key={fav.id} fav={fav}></FavoriteItems>)
+                   favorites.map(fav => <FavoriteItems key={fav.id} handleCloseBtn={handleCloseBtn} fav={fav}></FavoriteItems>)
                     : 
                   <div className='text-center'>
                       <h1 className='text-xl font-semibold mb-4'>No Favorites Yet</h1>
