@@ -1,56 +1,65 @@
 [
   {
     "id": 1,
-    "title": "Vintage Camera",
-    "description": "A classic vintage film camera in excellent condition.",
-    "currentBidPrice": 120,
-    "timeLeft": "2h 15m",
+    "title": "Vintage Canon Film Camera Collector Edition",
+    "description": "A classic vintage film camera in excellent condition for photography lovers.",
+    "currentBidPrice": 1250,
+    "timeLeft": "2 days left",
     "bidsCount": 8,
     "image": "https://i.ibb.co.com/xSR2JZv6/Bid1-min.png"
   },
   {
     "id": 2,
-    "title": "Gaming Laptop",
-    "description": "High-performance gaming laptop with RTX graphics card.",
-    "currentBidPrice": 950,
-    "timeLeft": "5h 40m",
+    "title": "High Performance ASUS ROG Gaming Laptop",
+    "description": "Powerful gaming laptop with RTX graphics card and fast processor.",
+    "currentBidPrice": 3500,
+    "timeLeft": "1 days left",
     "bidsCount": 15,
     "image": "https://i.ibb.co.com/SXWsj3qB/Bid2-min.png"
   },
   {
     "id": 3,
-    "title": "Smart Watch",
-    "description": "Waterproof smart watch with heart rate monitoring.",
-    "currentBidPrice": 75,
-    "timeLeft": "1d 3h",
+    "title": "Premium Waterproof Smart Watch Series X",
+    "description": "Smart watch with fitness tracking and heart rate monitoring.",
+    "currentBidPrice": 980,
+    "timeLeft": "2 days left",
     "bidsCount": 12,
     "image": "https://i.ibb.co.com/cSCf3m06/Bid3-min.png"
   },
   {
     "id": 4,
-    "title": "Mountain Bicycle",
-    "description": "Durable mountain bike suitable for off-road adventures.",
-    "currentBidPrice": 340,
-    "timeLeft": "6h 10m",
+    "title": "Professional Mountain Bicycle for Adventure",
+    "description": "Durable mountain bicycle suitable for off-road riding.",
+    "currentBidPrice": 4200,
+    "timeLeft": "4 days left",
     "bidsCount": 6,
     "image": "https://i.ibb.co.com/HDmJ7KDh/Bid4-min.png"
   },
   {
     "id": 5,
-    "title": "Wireless Headphones",
-    "description": "Noise-cancelling wireless headphones with long battery life.",
-    "currentBidPrice": 60,
-    "timeLeft": "9h 25m",
+    "title": "Wireless Noise Cancelling Bluetooth Headphones",
+    "description": "Premium quality wireless headphones with deep bass sound.",
+    "currentBidPrice": 1450,
+    "timeLeft": "5 days left",
     "bidsCount": 20,
-    "image": "https://i.ibb.co.com/N2xTdCRs/Bid5-min.png"
+     "image": "https://i.ibb.co.com/N2xTdCRs/Bid5-min.png"
   },
   {
     "id": 6,
-    "title": "Modern Desk Lamp",
-    "description": "Stylish LED desk lamp with adjustable brightness.",
-    "currentBidPrice": 45,
-    "timeLeft": "12h 50m",
+    "title": "Modern Adjustable LED Desk Study Lamp",
+    "description": "Stylish LED desk lamp with adjustable brightness levels.",
+    "currentBidPrice": 780,
+    "timeLeft": "3 days left",
     "bidsCount": 4,
-    "image": "https://i.ibb.co.com/tMPktWWK/Bid6-min.png"
-  }
+   "image": "https://i.ibb.co.com/tMPktWWK/Bid6-min.png"
+  },
+  {
+  "id": 7,
+  "title": "Luxury Wooden Dining Table Set for Modern Home",
+  "description": "Elegant wooden dining table set with premium quality finish and comfortable chairs.",
+  "currentBidPrice": 6800,
+  "timeLeft": "7 days left",
+  "bidsCount": 11,
+  "image": "https://i.ibb.co.com/hFMwhz30/Bid7-min.png"
+}
 ]
