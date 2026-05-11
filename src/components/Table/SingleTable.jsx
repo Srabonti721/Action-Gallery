@@ -4,17 +4,15 @@ import { IoHeartOutline } from "react-icons/io5";
 import { ToastContainer, toast } from 'react-toastify';
 
 
-const SingleTable = ({ galleryData }) => {
+const SingleTable = ({ galleryData, handleCurrentBit}) => {
   const { image, currentBidPrice, timeLeft, title,} = galleryData
-  const [bidNow, setVidNow] = useState(false)
+  const [bidNow, setVidNow] = useState(false);
+  // const [currentBid, setCurrentBid] = useState(0)
   const handleBidNowBtn = () =>{  
     setVidNow(true)
       toast(" 🦄 Wow so easy!")
-
+handleCurrentBit(galleryData)
   }
-  // const handleclick = () =>{
-  //   toast("clcsdfgaer")
-  // }
 
   return (
     <div className=" rounded-box border border-base-content/5">
@@ -40,12 +38,11 @@ const SingleTable = ({ galleryData }) => {
               <td><p>${currentBidPrice}</p></td>
               <td>{timeLeft}</td>
               <th>
-                <button onClick={handleBidNowBtn} className="btn btn-square "> {
+                <button onClick={(handleBidNowBtn)} className="btn btn-square "> {
                   bidNow? <FcLike size={20} style={{cursor: "not-allowed"}} />:<IoHeartOutline size={20}/> 
                   }
-                
                 </button>
-                  <ToastContainer/>
+                 
               </th>
             </div>
           </tr>

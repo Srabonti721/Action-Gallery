@@ -1,7 +1,7 @@
 import React, { use } from 'react';
 import SingleTable from './SingleTable';
 
-const Table = ({ galleryPromise }) => {
+const Table = ({ galleryPromise, handleCurrentBit }) => {
   const gallery = use(galleryPromise)
 
   return (
@@ -19,7 +19,10 @@ const Table = ({ galleryPromise }) => {
           </thead>
         </table>
       {
-        gallery.map(galleryData => <SingleTable key={galleryData.id} galleryData={galleryData} ></SingleTable>)
+        gallery.map(galleryData => <SingleTable
+           key={galleryData.id}
+            galleryData={galleryData}
+            handleCurrentBit={handleCurrentBit}></SingleTable>)
       }
     </div>
   );

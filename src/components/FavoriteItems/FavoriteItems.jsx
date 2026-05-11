@@ -10,7 +10,7 @@ const FavoriteItems = () => {
                 </div>
                 <div className="flex justify-between px-5 py-5 border-t-2 border-gray-200 text-xl font-semibold">
                     <h2>Total Bids Amount  </h2>
-                    <h2>$0000</h2>
+                    {/* <h2>${currentBid}</h2> */}
                 </div>
             </div>
         </div>
