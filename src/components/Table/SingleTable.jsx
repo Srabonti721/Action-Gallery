@@ -1,5 +1,6 @@
 import React from 'react';
 import { FcLike } from "react-icons/fc";
+import { IoHeartOutline } from "react-icons/io5";
 const SingleTable = ({ galleryData }) => {
   const { image, currentBidPrice, timeLeft, title, description } = galleryData
   console.log(galleryData);
@@ -29,6 +30,7 @@ const SingleTable = ({ galleryData }) => {
               <th>
                 <button className="btn btn-square">
                   <FcLike size={20} />
+                  {/* <IoHeartOutline size={20}/> */}
                 </button>
               </th>
             </div>
