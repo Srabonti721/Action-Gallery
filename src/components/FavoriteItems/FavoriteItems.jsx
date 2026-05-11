@@ -1,16 +1,19 @@
 import React from 'react';
-import { IoHeartOutline } from "react-icons/io5";
-const FavoriteItems = () => {
+import { IoMdClose } from "react-icons/io";
+    
+const FavoriteItems = ({ fav }) => {
+    const { image, title, bidsCount, currentBidPrice } = fav
     return (
-        <div className="card bg-base-100 shadow-sm">
-            <div>
-                <div className='card-body  items-center  text-center'>
-                    <h2 className="card-title text-[#0E2954] text-xl font-semibold"> <IoHeartOutline size={20} />Favorite Items</h2>
-                    <p className=''>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                </div>
-                <div className="flex justify-between px-5 py-5 border-t-2 border-gray-200 text-xl font-semibold">
-                    <h2>Total Bids Amount  </h2>
-                    {/* <h2>${currentBid}</h2> */}
+        <div className='flex gap-2 text-[#0E2954] my-4 border-b-2 border-gray-200'>
+            <img className='w-25 h-20' src={image} alt="" />
+            <div >
+              <div className='flex gap-4 justify-between items-start '>
+                  <h2 className='font-semibold'>{title}</h2>
+              <button><IoMdClose size={20}/></button>
+              </div>
+                <div className='flex gap-4 my-2'>
+                    <h3>${currentBidPrice}</h3>
+                    <p>Bids : {bidsCount}</p>
                 </div>
             </div>
         </div>

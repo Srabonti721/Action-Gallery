@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
 import { FcLike } from "react-icons/fc";
 import { IoHeartOutline } from "react-icons/io5";
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 
 const SingleTable = ({ galleryData, handleCurrentBit}) => {
   const { image, currentBidPrice, timeLeft, title,} = galleryData
   const [bidNow, setVidNow] = useState(false);
-  // const [currentBid, setCurrentBid] = useState(0)
   const handleBidNowBtn = () =>{  
-    setVidNow(true)
-      toast(" 🦄 Wow so easy!")
+    toast(" 🦄 Wow so easy!")
+    setVidNow(true)    
 handleCurrentBit(galleryData)
   }
 
