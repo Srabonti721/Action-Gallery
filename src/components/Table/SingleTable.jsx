@@ -3,21 +3,17 @@ import { FcLike } from "react-icons/fc";
 import { IoHeartOutline } from "react-icons/io5";
 import { toast } from 'react-toastify';
 
-
-const SingleTable = ({ galleryData, handleCurrentBit}) => {
-  const { image, currentBidPrice, timeLeft, title,} = galleryData
+const SingleTable = ({ galleryData, handleCurrentBit }) => {
+  const { image, currentBidPrice, timeLeft, title, } = galleryData
   const [bidNow, setVidNow] = useState(false);
-  const handleBidNowBtn = () =>{  
+  const handleBidNowBtn = () => {
     toast(" 🦄 Items added to your favorite list")
-    setVidNow(true)  
-  
-  
-handleCurrentBit(galleryData)
+    setVidNow(true)
+    handleCurrentBit(galleryData)
   }
 
   return (
 
- 
     <div className=" rounded-box border border-base-content/5">
 
       <table className="table">
@@ -42,10 +38,10 @@ handleCurrentBit(galleryData)
               <td><p>${currentBidPrice}</p></td>
               <td>{timeLeft}</td>
               <th>
-                <button onClick={(handleBidNowBtn)} disabled={bidNow} className={`px-4 py-2 rounded ${ bidNow ? "cursor-not-allowed" : " "}`}  > 
+                <button onClick={(handleBidNowBtn)} disabled={bidNow} className={`px-4 py-2 rounded ${bidNow ? "cursor-not-allowed" : " "}`}  >
                   {
-                  bidNow? <FcLike size={20} />:<IoHeartOutline size={20}  /> 
-                   }
+                    bidNow ? <FcLike size={20} /> : <IoHeartOutline size={20} />
+                  }
                 </button>
               </th>
             </div>
