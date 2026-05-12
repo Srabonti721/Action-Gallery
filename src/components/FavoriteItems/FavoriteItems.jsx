@@ -10,7 +10,7 @@ const FavoriteItems = ({ fav, handleCloseBtn }) => {
             <div >
               <div className='flex gap-2 justify-between items-start '>
                   <h2 className='font-semibold'>{title}</h2>
-              <button onClick={()=>handleCloseBtn(id)}><IoMdClose size={20}/></button>
+              <button onClick={()=>handleCloseBtn(fav,id)}><IoMdClose size={20}/></button>
               </div>
                 <div className='flex gap-4 my-2'>
                     <h3>${currentBidPrice}</h3>

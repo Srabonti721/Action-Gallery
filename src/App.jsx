@@ -23,12 +23,18 @@ function App() {
     setFavorites(newFavoriteData)
 
     const newBid = currentBid + galleryData.currentBidPrice;
+    // console.log(newBid);
     setCurrentBid(newBid)
   }
-  const handleCloseBtn = (id) => {
+  const handleCloseBtn = (fav, id) => {
+    console.log(fav);
+    
     const remainingFavorites = favorites.filter((fav) => fav.id !== id)
     toast.warn(" 🦄 Items Removed from favorites")
     setFavorites(remainingFavorites)
+   const current = currentBid - fav.currentBidPrice
+  //  console.log(current);
+    setCurrentBid(current)
   }
   return (
     <>
@@ -39,7 +45,7 @@ function App() {
           <h1 className='text-[#0E2954] text-xl'>Action Actives</h1>
           <p className='text-xm'>Discover and bid on extraordinary items</p>
           <div className=" rounded-box border border-base-content/5 bg-base-100 my-6">
-            <Suspense>
+            <Suspense fallback={<p>loading...</p>}>
               <Table galleryPromise={galleryPromise} handleCurrentBit={handleCurrentBit}></Table>
             </Suspense>
             <ToastContainer />
