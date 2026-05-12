@@ -7,7 +7,7 @@ import Navbar from './components/Navbar/Navbar'
 import Table from './components/Table/Table'
 import FavoriteItems from './components/FavoriteItems/FavoriteItems'
 import { IoHeartOutline } from "react-icons/io5";
-import { ToastContainer } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 
 const fetchGallery = async () => {
   const res = await fetch('gallery.json')
@@ -16,34 +16,20 @@ const fetchGallery = async () => {
 
 function App() {
   const galleryPromise = fetchGallery()
-  // console.log(galleryPromise);
   const [currentBid, setCurrentBid] = useState(0);
   const [favorites, setFavorites] = useState([]);
-  const [fav, setFav] = useState(false)
-  const handleCurrentBit = (galleryData, id) => {
-handleCloseBtn(id)
+  const handleCurrentBit = (galleryData,) => {
     const newFavoriteData = [...favorites, galleryData]
     setFavorites(newFavoriteData)
 
     const newBid = currentBid + galleryData.currentBidPrice;
     setCurrentBid(newBid)
-    setFav(true)
   }
-  const handleCloseBtn = (id) =>{  
-    const remainingFavorites = favorites.filter((fav)=>fav.id !== id)
-    console.log(remainingFavorites.length);
-    
-   if(remainingFavorites.length > 0) {
+  const handleCloseBtn = (id) => {
+    const remainingFavorites = favorites.filter((fav) => fav.id !== id)
+    toast.warn(" 🦄 Items Removed from favorites")
     setFavorites(remainingFavorites)
-   }
-   else{
-          <div className='text-center'>
-                      <h1 className='text-xl font-semibold mb-4'>No Favorites Yet</h1>
-                      <p>Click the heart icon on any item to add it to your favorites</p>
-                  </div>
-   }
   }
-
   return (
     <>
       <Navbar></Navbar>
@@ -68,15 +54,14 @@ handleCloseBtn(id)
               </div>
               <div className='px-4 my-4'>
                 {
-                  fav ?
-                   favorites.map(fav => <FavoriteItems key={fav.id} handleCloseBtn={handleCloseBtn} fav={fav}></FavoriteItems>)
-                    : 
-                  <div className='text-center'>
+                  favorites.length === 0 ?
+                    <div className='text-center'>
                       <h1 className='text-xl font-semibold mb-4'>No Favorites Yet</h1>
                       <p>Click the heart icon on any item to add it to your favorites</p>
-                  </div>
-               
-                  } 
+                    </div>
+                    :
+                    favorites.map(fav => <FavoriteItems key={fav.id} handleCloseBtn={handleCloseBtn} fav={fav}></FavoriteItems>)
+                }
               </div>
               <div className="flex justify-between px-5 py-5 border-t-2 border-gray-200 text-xl font-semibold">
                 <h2>Total Bids Amount  </h2>
