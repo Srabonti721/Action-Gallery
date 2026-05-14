@@ -38,8 +38,11 @@ function App() {
   }
   return (
     <>
+    <header className='container mx-auto'>
       <Navbar></Navbar>
       <Banner></Banner>
+    </header>
+
       <main className='container mx-auto px-4 py-10 bg-gray-200  flex gap-4'>
         <div className='left-container w-[70%]'>
           <h1 className='text-[#0E2954] text-xl'>Action Actives</h1>
@@ -77,7 +80,9 @@ function App() {
           </div>
         </div>
       </main>
-      <Footer></Footer>
+    <footer className='container mx-auto'>
+        <Footer></Footer>
+    </footer>
     </>
   )
 }
